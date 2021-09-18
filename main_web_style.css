@@ -1,1 +1,10 @@
-
+.created{
+    background-color: palegoldenrod;
+    color: blue;
+    font-size: xx-large;
+}
+.time{
+    position: absolute;
+    top: 61px;
+    font-size: 12px;
+}
