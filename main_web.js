@@ -10,6 +10,10 @@ document.getElementById("button1").addEventListener("click", function(){
     document.getElementById("button" + String(currentPage)).style.opacity = 1;
     currentPage = 1;
     document.getElementById("button" + String(currentPage)).style.opacity = 0.6;
+    let x = document.getElementsByClassName("time")
+    for (var i =0; i<x.length;i++){
+        x[i].style.display = "none"; 
+    }
 
 });
 
