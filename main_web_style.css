@@ -8,3 +8,16 @@
     top: 61px;
     font-size: 12px;
 }
+.pageButton{
+    font-size: 24px;
+    padding: 14px 20px;
+    transition-duration: 0.4s;
+    float: left;
+    border: 1px solid#000000;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #B5C99A;
+
+}
+.pageButton:hover {
+    background-color:#CFE1B9; /* Green */
+  }
