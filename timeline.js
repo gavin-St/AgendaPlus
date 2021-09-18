@@ -1,3 +1,4 @@
+ 
 function timeline(){
  
  
@@ -50,8 +51,9 @@ function timeline(){
  
             let xcoor = {
                 'left': String((((parseInt(foo[0]) - cur_hour + 23)%24) * 180 + parseInt(foo[1]) * 3) + 28) + 'px',
-                'width' : String(((parseInt(bar[0]) - cur_hour + 23)%24) * 180 + parseInt(bar[1]) * 3 - ((parseInt(foo[0]) - cur_hour + 23)%24) * 180 + parseInt(foo[1]) * 3) + 'px',
+                'width' : String((((parseInt(bar[0]) - cur_hour + 23)%24) * 180 + parseInt(bar[1]) * 3 ) - (((parseInt(foo[0]) - cur_hour + 23)%24) * 180 + parseInt(foo[1]) * 3)) + 'px',
             }
+ 
  
             btn.style.position = "absolute";
             btn.style.left = xcoor.left;
@@ -62,3 +64,4 @@ function timeline(){
  
     new event("13:00", "15:00", "testEvent");
 }
+
