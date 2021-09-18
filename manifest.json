@@ -2,15 +2,18 @@
     "name": "AgendaPlus",
     "description": "Multifunctional Agenda extension",
     "version": "1.0",
-    "manifest_version": 3
-  "background": {
+    "manifest_version": 3,
+    "background": {
       "service_worker": "background.js"
     },
-"permissions": ["storage", "activeTab", "scripting"],
-"action": {
-  //set default icon here?
-}
-"icons": {
-  //icons here
-}
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        
+      }
+    },
+    "icons": {
+      
+    }
   }
