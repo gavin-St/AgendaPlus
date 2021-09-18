@@ -1,7 +1,8 @@
- 
+document.getElementById("create_event").addEventListener("click",function(){
+    document.getElementById("event_interface").style.display = "block"
+    document.getElementById("darken").style.display = "block"
+})
 function timeline(){
- 
- 
  
  
     var main_canvas = document.getElementById("canvas");
@@ -64,4 +65,3 @@ function timeline(){
  
     new event("13:00", "15:00", "testEvent");
 }
-
