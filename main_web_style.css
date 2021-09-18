@@ -20,13 +20,12 @@
     border: 1px solid#000000;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #B5C99A;
-
 }
 .pageButton:hover {
     background-color:#CFE1B9; /* Green */
   }
 #darken{
-    height:10000px;
+    height:1000px;
     width: 10000px;
     background-color: rgb(38, 37, 44);
     position:absolute;
