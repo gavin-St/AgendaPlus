@@ -35,9 +35,6 @@ function timeline(){
     }
 
     
-eventCreator("20:00", "21:00", "test", "this is a test event");
-eventCreator("14:00", "16:30", "test2", "this is also a test event");
-console.log(obj);
 }
 
 
