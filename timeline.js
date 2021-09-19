@@ -34,7 +34,9 @@ function timeline(){
         ctx.stroke();
     }
 
-    localStorage.setItem("timeline", `[{"starttime": "8:00", "endtime": "10:00", "name":"testing", "details": "testing again"}]`);
+    
+    eventCreator("4:00", "6:00", "test");
+    eventCreator("10:00", "12:00")
     existingEvents();
 }
 
@@ -47,7 +49,13 @@ function eventCreator (starttime, endtime, name, details) {
     this.name = name;
     this.details = details;
     var btn = document.createElement("button");
-        
+    
+    if (name == null){
+        name = "Unnamed Event"
+    };
+    if (details == null){
+        details = "No discription"
+    };
     btn.setAttribute('id', name);
     btn.innerHTML = name
 
@@ -65,17 +73,20 @@ function eventCreator (starttime, endtime, name, details) {
     document.body.appendChild(btn);
     obj.push(`{"starttime":"${starttime}", "endtime":"${endtime}", "name":"${name}", "details":"${details}"}`);
     localStorage.setItem("timeline", JSON.stringify(obj));
+    console.log(JSON.parse(localStorage.getItem("timeline")));
 }
 
 function existingEvents(){
     for (i = 0; i < JSON.parse(localStorage.getItem("timeline")).length; i++){
-        var event = JSON.parse(localStorage.getItem('timeline'))[i];
+        var event = JSON.parse(JSON.parse(localStorage.getItem('timeline'))[i]);
         var starttime = String(event.starttime);
         var endtime = String(event.endtime);
         var name = String(event.name);
         var details = String(event.details);
         let foo = starttime.split(":");
         let bar = endtime.split(":");
+        console.log(typeof(event));
+        console.log(starttime);
 
         var btn = document.createElement("button");
         btn.setAttribute('id', name);
